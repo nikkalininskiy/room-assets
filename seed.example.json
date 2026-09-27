@@ -1,0 +1,73 @@
+{
+  "rooms": [
+    {
+      "id": "r-101",
+      "name": "Аудитория 101",
+      "capacity": 30,
+      "features": ["projector", "whiteboard"]
+    },
+    {
+      "id": "r-203",
+      "name": "Аудитория 203",
+      "capacity": 20,
+      "features": []
+    },
+    {
+      "id": "r-305",
+      "name": "Конференц-зал 305",
+      "capacity": 50,
+      "features": ["projector", "microphone", "wifi"]
+    }
+  ],
+  "assets": [
+    {
+      "id": "a-proj-1",
+      "name": "Проектор Epson EB-695Wi",
+      "inventoryCode": "PRJ-001",
+      "status": "available"
+    },
+    {
+      "id": "a-proj-2",
+      "name": "Проектор BenQ TH671ST",
+      "inventoryCode": "PRJ-002",
+      "status": "in_use"
+    },
+    {
+      "id": "a-lap-1",
+      "name": "Ноутбук Lenovo ThinkPad X1",
+      "inventoryCode": "LAP-001",
+      "status": "available"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b-1",
+      "resourceType": "room",
+      "resourceId": "r-101",
+      "title": "Семинар по TypeScript",
+      "start": "2025-09-05T08:00:00Z",
+      "end": "2025-09-05T09:30:00Z",
+      "notes": "Нужен HDMI-кабель"
+    },
+    {
+      "id": "b-2",
+      "resourceType": "room",
+      "resourceId": "r-203",
+      "title": "Лекция по алгоритмам",
+      "start": "2025-09-06T10:00:00Z",
+      "end": "2025-09-06T12:00:00Z",
+      "notes": ""
+    },
+    {
+      "id": "b-3",
+      "resourceType": "asset",
+      "resourceId": "a-proj-1",
+      "title": "Презентация проекта",
+      "start": "2025-09-07T14:00:00Z",
+      "end": "2025-09-07T15:30:00Z",
+      "notes": "Подключить к ноутбуку"
+    }
+  ],
+  "exportedAt": "2025-09-05T12:00:00.000Z",
+  "version": "1.0"
+}   
