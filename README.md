@@ -1,32 +1,73 @@
-# React + TypeScript + Vite
+# Room & Assets — система управления бронированием
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+SPA-приложение для управления бронированием аудиторий и инвентаря.
 
-Currently, two official plugins are available:
+## 🚀 Запуск
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Требования
+- Node.js 20.19+ или 22.12+
+- npm 10+
 
-## React Compiler
+### Установка и запуск
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
 
-## Expanding the Oxlint configuration
+Прод-сборка
+npm run build
+npm run preview
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Данные
+---Хранятся в IndexedDB (браузер)
+---Экспорт/импорт — через JSON-файл
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Стек
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---React 19 + TypeScript
+---Vite — сборка и дев-сервер
+---MUI — UI-компоненты
+---MSW — моки API (только DEV)
+---IndexedDB — локальное хранилище
+---Vitest — тесты
+
+Функционал
+---Каталог ресурсов (комнаты + активы)
+--- Управление бронированием (CRUD)
+--- Проверка пересечений интервалов
+--- Поиск и фильтрация
+--- Экспорт/импорт JSON
+--- Авторизация (локальная сессия)
+--- WAI-ARIA (доступность)
+
+Структура
+
+src/
+├── api/          # API-функции и DTO
+├── components/   # Компоненты
+├── config/       # Конфигурация
+├── context/      # Контексты (авторизация)
+├── lib/          # Утилиты (IndexedDB, даты)
+├── mocks/        # MSW-моки (DEV)
+├── pages/        # Страницы
+├── services/     # Сервисный слой
+├── styles/       # Глобальные стили
+└── types/        # TypeScript-типы
+
+Тесты
+
+npm run test
+
+
+Документация
+
+---SPEC.md — модель данных
+---UI.md — описание экранов
+---DATA.md — формат JSON
+---DECISIONS.md — выбор стека
+---TESTS.md — тестовые сценарии
+---COMPAT.md — Windows / Linux
+---CHANGELOG.md — история изменений
+---REPORT.md — отчёт
+
+Автор: Калининский Н.Н., №131-аПиО

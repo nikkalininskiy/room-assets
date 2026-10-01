@@ -9,7 +9,6 @@ import { fetchAssets } from "@/api/assetsApi";
 import { fetchBookings } from "@/api/bookingsApi";
 import "./App.css";
 
-// Импорты компонентов страниц (создадим позже)
 import { RoomsCatalog } from "@/pages/RoomsCatalog";
 import { BookingsList } from "@/pages/BookingsList";
 import { SettingsPage } from "@/pages/SettingsPage";
@@ -24,7 +23,7 @@ function App() {
   const handleLogin = () => {
     signIn({
       id: "user-1",
-      name: "Студент Петров",
+      name: "Студент Калининский",
       email: "student@example.com",
     });
   };
@@ -33,7 +32,6 @@ function App() {
     signOut();
   };
 
-  // Рендерим страницу в зависимости от активной вкладки
   const renderPage = () => {
     switch (activeTab) {
       case "catalog":
