@@ -1,9 +1,6 @@
-# Отчёт по лабораторной работе №1
-## «Room & Assets» (Client)
-
-**Студент:** [ФИО]  
-**Группа:** [номер группы]  
-**Дата:** [дата сдачи]
+# Отчёт по лабораторной работе «Room & Assets»
+Калининский Никита Николаевич
+Группа: №141аПиО
 
 ---
 
@@ -136,3 +133,12 @@
   ```dockerfile
   RUN npm install @rolldown/binding-linux-x64-gnu --no-save --force
   RUN npm install lightningcss-linux-x64-gnu --no-save --force
+
+  ## Деплой
+
+Приложение развёрнуто на Render (Static Site):
+[**https://room-assets-XXXX.onrender.com**](https://room-assets-1jdd.onrender.com/)
+
+- Автодеплой при пуше в `main`
+- Rewrite-правило: `/*` → `/index.html` (SPA fallback)
+- Данные хранятся в IndexedDB браузера
